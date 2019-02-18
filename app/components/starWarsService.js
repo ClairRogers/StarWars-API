@@ -64,6 +64,8 @@ export default class SWService {
     //creates new object that is a copy of the active person (breaking reference)
     return new Person(_state.activePerson)
   }
+
+
   get Starships() {
     return _state.starships.map(s => new Starship(s))
   }
@@ -100,6 +102,7 @@ export default class SWService {
         console.error(err)
       })
   }
+
 
   getAllApiShips(url = '') {
     _starshipApi.get(url)

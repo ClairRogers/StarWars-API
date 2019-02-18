@@ -6,6 +6,7 @@ export default class Person {
     this.hairColor = data.hair_color || data.hairColor
     this.eyeColor = data.eye_color || data.eyeColor
     this.movies = data.movies || data.films.length
+    this.birth_year = data.birth_year
     this.url = data.url
   }
   getBasicTemplate() {
@@ -15,8 +16,10 @@ export default class Person {
     return `
     <h3>${this.name}</h3>
       <p>Gender: ${this.gender}</p>
+      <p>Birth Year: ${this.birth_year}</p>
       <p>Hair: ${this.hairColor}</p>
       <p>Eyes: ${this.eyeColor}</p>
+      <p>Height: ${this.height} cm</p>
       <p>Movies: ${this.movies}</p>
     `
   }

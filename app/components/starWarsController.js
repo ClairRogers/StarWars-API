@@ -4,7 +4,6 @@ import SWService from "./starWarsService.js";
 let _sws = new SWService
 
 
-
 function drawPeople() {
   let people = _sws.People
   let template = ''

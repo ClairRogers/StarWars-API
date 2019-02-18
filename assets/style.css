@@ -8,7 +8,7 @@ body {
 }
 
 .background {
-  background-color: rgba(0, 0, 0, 0.363);
+  background-color: rgba(0, 0, 0, 0.384);
   border: solid 1px black;
 }
 
@@ -22,4 +22,8 @@ body {
 
 .shadow {
   text-shadow: 0 0 20px black;
+}
+
+#header button {
+  width: 100px;
 }
