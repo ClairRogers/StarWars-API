@@ -1,0 +1,14 @@
+body {
+  color: white;
+  background-image: url(images/space.jpg);
+  height: 100vh;
+  background-size: cover;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, 0.363);
+}
+
+#sw-items li {
+  cursor: pointer;
+}
