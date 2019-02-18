@@ -8,7 +8,7 @@ export default class Starship {
     this.url = data.url
   }
   getBasicTemplate() {
-    return `<li onclick="app.controllers.swController.getShip('${this.url}')">${this.name}</li>`
+    return `<p onclick="app.controllers.swController.getShip('${this.url}')">${this.name}</p>`
   }
   getDetailedTemplate() {
     return `

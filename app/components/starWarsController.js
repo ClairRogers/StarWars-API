@@ -12,8 +12,8 @@ function drawPeople() {
     template += p.getBasicTemplate()
   })
   document.getElementById('sw-items').innerHTML = template
-  document.getElementById('buttons').innerHTML = `<button ${_sws.Previous ? '' : 'disabled'} onclick="app.controllers.swController.getPeople('${_sws.Previous}')">Previous</button>
-    <button ${_sws.Next ? '' : 'disabled'} onclick="app.controllers.swController.getPeople('${_sws.Next}')">Next</button>`
+  document.getElementById('buttons').innerHTML = `<button ${_sws.Previous ? '' : 'disabled'} type="button" class="btn btn-warning mb-4" onclick="app.controllers.swController.getPeople('${_sws.Previous}')">Previous</button>
+    <button ${_sws.Next ? '' : 'disabled'} type="button" class="btn btn-warning mb-4" onclick="app.controllers.swController.getPeople('${_sws.Next}')">Next</button>`
 }
 
 function drawActivePerson() {
@@ -30,8 +30,8 @@ function drawShips() {
     template += s.getBasicTemplate()
   })
   document.getElementById('sw-items').innerHTML = template
-  document.getElementById('buttons').innerHTML = `<button ${_sws.PrevShip ? '' : 'disabled'} onclick="app.controllers.swController.getStarships('${_sws.PrevShip}')">Previous</button>
-    <button ${_sws.NextShip ? '' : 'disabled'} onclick="app.controllers.swController.getStarships('${_sws.NextShip}')">Next</button>`
+  document.getElementById('buttons').innerHTML = `<button ${_sws.PrevShip ? '' : 'disabled'} type="button" class="btn btn-warning mb-4" onclick="app.controllers.swController.getStarships('${_sws.PrevShip}')">Previous</button>
+    <button ${_sws.NextShip ? '' : 'disabled'} type="button" class="btn btn-warning mb-4" onclick="app.controllers.swController.getStarships('${_sws.NextShip}')">Next</button>`
 }
 
 function drawActiveShip() {
@@ -51,8 +51,8 @@ export default class SWController {
   }
   getPeople(url) {
     _sws.getAllApiPeople(url)
-    document.getElementById('buttons').innerHTML = `<button ${_sws.Previous ? '' : 'disabled'} onclick="app.controllers.swController.getPeople('${_sws.Previous}')">Previous</button>
-    <button onclick="app.controllers.swController.getPeople('${_sws.Next}')" ${_sws.Next ? '' : 'disabled'}>Next</button>`
+    document.getElementById('buttons').innerHTML = `<button ${_sws.Previous ? '' : 'disabled'} type="button" class="btn btn-warning mb-4" onclick="app.controllers.swController.getPeople('${_sws.Previous}')">Previous</button>
+    <button type="button" class="btn btn-warning mb-4" onclick="app.controllers.swController.getPeople('${_sws.Next}')" ${_sws.Next ? '' : 'disabled'}>Next</button>`
     document.getElementById('active-item').innerHTML = ''
   }
   getPerson(url) {
@@ -60,8 +60,8 @@ export default class SWController {
   }
   getStarships(url) {
     _sws.getAllApiShips(url)
-    document.getElementById('buttons').innerHTML = `<button ${_sws.PrevShip ? '' : 'disabled'} onclick="app.controllers.swController.getStarships('${_sws.PrevShip}')">Previous</button>
-    <button ${_sws.NextShip ? '' : 'disabled'} onclick="app.controllers.swController.getStarships('${_sws.NextShip}')">Next</button>`
+    document.getElementById('buttons').innerHTML = `<button ${_sws.PrevShip ? '' : 'disabled'} type="button" class="btn btn-warning mb-4" onclick="app.controllers.swController.getStarships('${_sws.PrevShip}')">Previous</button>
+    <button ${_sws.NextShip ? '' : 'disabled'} type="button" class="btn btn-warning mb-4" onclick="app.controllers.swController.getStarships('${_sws.NextShip}')">Next</button>`
     document.getElementById('active-item').innerHTML = ''
   }
   getShip(url) {
